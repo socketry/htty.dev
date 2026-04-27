@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<?r response.cache! ?>
+		
+		<?r if title = self[:title] ?>
+			<title>#{title.gsub(/<.*?>/, "")} - HTTY</title>
+		<?r else ?>
+			<title>HTTY</title>
+		<?r end ?>
+		
+		<base href="#{document.base_uri}"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+		
+		<link rel="icon" type="image/png" href="/_static/icon.svg" />
+		<link rel="stylesheet" href="/_static/site.css" type="text/css" media="screen" />
+	</head>
+
+	<body class="#{attributes[:class]}">
+		<header>
+			<div class="masthead">
+				<p class="eyebrow">Terminal-native transport for interactive protocols</p>
+				<h1>HTTY</h1>
+				<p class="tagline">Specifications, libraries, and tools for moving HTTP/2 and related session traffic over terminal side channels.</p>
+			</div>
+		</header>
+
+		<div id="page">
+			<utopia:content/>
+		</div>
+
+		<footer>
+			<p>HTTY is part of the Socketry ecosystem.</p>
+		</footer>
+	</body>
+</html>
