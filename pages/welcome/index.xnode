@@ -22,7 +22,7 @@
 			<h2>How it works</h2>
 			<p>HTTY starts with a small terminal control sequence. The command emits a DCS bootstrap message, and Chimera uses it to recognize that the process wants to attach an application surface.</p>
 			<p>After that bootstrap, the session switches to raw terminal I/O. Chimera and the command exchange plaintext HTTP/2 (<code>h2c</code>) over the same byte stream, while Chimera presents responses as local browser tabs.</p>
-			<p>The HTTP/2 session is not wrapped in DCS packets. DCS is only the bootstrap; the application traffic flows over the terminal byte stream.</p>
+			<p>Because <code>h2c</code> provides multiplexed, bidirectional streams, the attached app can move requests, responses, events, and assets over any TTY transport, including local shells and remote SSH sessions.</p>
 		</div>
 		<img class="how-it-works-diagram" src="/_static/how-it-works.svg" alt="Diagram showing DCS bootstrap followed by raw terminal I/O carrying h2c between a command, Chimera, and a browser surface" />
 	</section>
