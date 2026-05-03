@@ -19,14 +19,6 @@
 	</head>
 
 	<body class="#{attributes[:class]}">
-		<header>
-			<div class="masthead">
-				<p class="eyebrow">Terminal-native transport for interactive protocols</p>
-				<h1>HTTY</h1>
-				<p class="tagline">Specifications, libraries, and tools for moving HTTP/2 and related session traffic over terminal side channels.</p>
-			</div>
-		</header>
-
 		<div id="page">
 			<utopia:content/>
 		</div>
