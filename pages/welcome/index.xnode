@@ -1,32 +1,38 @@
 <content:page class="front ecosystem-page">
 	<section class="hero">
 		<content:heading>HTTY's ecosystem is taking shape.</content:heading>
-		<p class="lead">This site is a placeholder for the HTTY specifications, reference implementations, integration libraries, and developer tools that make terminal-native application sessions practical.</p>
-		<p>Today, the HTTY stack spans protocol framing, HTTP/2 adaptation layers, JavaScript and Ruby implementations, and a browser-like terminal client. This page is the initial map.</p>
+		<p class="lead">Specifications, libraries, and tools for building terminal-native applications that can surface rich HTTP/2-backed views from ordinary command-line sessions.</p>
+		<p>Today, the HTTY stack spans protocol framing, HTTP/2 adaptation layers, JavaScript and Ruby implementations, and Chimera: a browser-like terminal client for attached application surfaces.</p>
+		<div class="download-actions">
+			<a class="download-button primary" href="https://github.com/socketry/chimera/releases/latest/download/Chimera-macOS-arm64.dmg">Download macOS</a>
+			<a class="download-button" href="https://github.com/socketry/chimera/releases/latest/download/Chimera-Linux-x64.AppImage">Download Linux</a>
+			<a class="download-button" href="https://github.com/socketry/chimera/releases/latest/download/Chimera-Windows-x64.exe">Download Windows</a>
+			<a class="download-link" href="https://github.com/socketry/chimera/releases/latest">All releases</a>
+		</div>
 	</section>
 
 	<section class="feature-grid">
 		<div class="feature-card">
 			<h2>Core Specifications</h2>
-			<p><strong>protocol-htty</strong> defines the terminal-safe framing layer that carries an opaque session byte stream over DCS packets.</p>
-			<p><strong>protocol-http2</strong> provides the HTTP/2 wire semantics that HTTY transports when the session speaks plaintext <code>h2</code>.</p>
+			<p><a href="https://github.com/socketry/protocol-htty"><strong>protocol-htty</strong></a> defines the terminal bootstrap that uses DCS to negotiate an attached session.</p>
+			<p><a href="https://github.com/socketry/protocol-http2"><strong>protocol-http2</strong></a> provides the HTTP/2 wire semantics that HTTY carries as plaintext <code>h2c</code> over raw terminal I/O after bootstrap.</p>
 		</div>
 
 		<div class="feature-card">
 			<h2>Ruby Integration</h2>
-			<p><strong>async-htty</strong> adapts HTTY streams into Async-compatible HTTP/2 connections so Ruby applications can expose middleware over a terminal session.</p>
+			<p><a href="https://github.com/socketry/async-htty"><strong>async-htty</strong></a> adapts HTTY streams into Async-compatible HTTP/2 connections so Ruby applications can expose middleware over a terminal session.</p>
 			<p>This is the layer that connects transport framing to request and response handling.</p>
 		</div>
 
 		<div class="feature-card">
 			<h2>JavaScript Runtime</h2>
-			<p><strong>@socketry/htty</strong> implements HTTY transport, client, and server primitives for Node.js and browser-adjacent tooling.</p>
+			<p><a href="https://github.com/socketry/htty-js"><strong>@socketry/htty</strong></a> implements HTTY transport, client, and server primitives for Node.js and browser-adjacent tooling.</p>
 			<p>It currently powers the demo sessions and end-to-end flows used by Chimera.</p>
 		</div>
 
 		<div class="feature-card">
 			<h2>Interactive Client</h2>
-			<p><strong>Chimera</strong> is the browser-like terminal environment that turns HTTY packets into attached surfaces and tabbed session views.</p>
+			<p><a href="https://github.com/socketry/chimera"><strong>Chimera</strong></a> is the browser-like terminal environment that turns HTTY packets into attached surfaces and tabbed session views.</p>
 			<p>It demonstrates the user experience HTTY is designed to unlock.</p>
 		</div>
 	</section>
@@ -35,7 +41,7 @@
 		<h2>Ecosystem Roadmap</h2>
 		<ul>
 			<li>Publish a compact overview of the HTTY transport model and packet types.</li>
-			<li>Document the layering between protocol-htty, protocol-http2, async-http, and async-htty.</li>
+			<li>Document the layering between <a href="https://github.com/socketry/protocol-htty">protocol-htty</a>, <a href="https://github.com/socketry/protocol-http2">protocol-http2</a>, <a href="https://github.com/socketry/async-http">async-http</a>, and <a href="https://github.com/socketry/async-htty">async-htty</a>.</li>
 			<li>Link reference implementations and runnable examples for Ruby and JavaScript.</li>
 			<li>Describe client behavior and attached-surface semantics as Chimera evolves.</li>
 		</ul>
@@ -46,11 +52,19 @@
 		<div class="repository-list">
 			<a class="repository-card" href="https://github.com/socketry/protocol-htty">
 				<strong>protocol-htty</strong>
-				<span>Transport framing over terminal side channels.</span>
+				<span>DCS bootstrap specification for attached terminal sessions.</span>
+			</a>
+			<a class="repository-card" href="https://github.com/socketry/protocol-htty#readme">
+				<strong>HTTY Specification</strong>
+				<span>The protocol documentation and packet model.</span>
 			</a>
 			<a class="repository-card" href="https://github.com/socketry/protocol-http2">
 				<strong>protocol-http2</strong>
-				<span>HTTP/2 wire semantics reused by the HTTY stack.</span>
+				<span>HTTP/2 wire semantics carried as h2c after HTTY bootstrap.</span>
+			</a>
+			<a class="repository-card" href="https://github.com/socketry/async-http">
+				<strong>async-http</strong>
+				<span>Async HTTP client and server primitives for Ruby applications.</span>
 			</a>
 			<a class="repository-card" href="https://github.com/socketry/async-htty">
 				<strong>async-htty</strong>
@@ -63,6 +77,10 @@
 			<a class="repository-card" href="https://github.com/socketry/chimera">
 				<strong>chimera</strong>
 				<span>Desktop client for surfacing HTTY-backed application views.</span>
+			</a>
+			<a class="repository-card" href="https://github.com/socketry/chimera/releases/latest">
+				<strong>Chimera Releases</strong>
+				<span>Latest desktop downloads and release notes.</span>
 			</a>
 		</div>
 	</section>

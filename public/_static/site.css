@@ -240,6 +240,50 @@ form fieldset.footer {
 	color: #29374d;
 }
 
+.download-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	align-items: center;
+	margin: 2rem;
+}
+
+.download-button,
+.download-link {
+	display: inline-flex;
+	align-items: center;
+	min-height: 2.6rem;
+	text-decoration: none;
+}
+
+.download-button {
+	padding: 0 1rem;
+	border: 1px solid rgba(66, 97, 153, 0.16);
+	border-radius: 0.55rem;
+	background: #12304f;
+	box-shadow: 0 0.8rem 2rem rgba(7, 17, 31, 0.12);
+	color: white;
+}
+
+.download-button.primary {
+	background: #ffad4a;
+	color: #221405;
+}
+
+.download-button:hover {
+	background: #244d7b;
+	color: white;
+}
+
+.download-button.primary:hover {
+	background: #ffc16e;
+	color: #221405;
+}
+
+.download-link {
+	color: #285d99;
+}
+
 .feature-grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
@@ -269,6 +313,12 @@ form fieldset.footer {
 .feature-card p {
 	margin: 0.75rem 0 0;
 	line-height: 1.6;
+}
+
+.feature-card a {
+	color: #244d7b;
+	text-decoration-thickness: 0.08em;
+	text-underline-offset: 0.14em;
 }
 
 .roadmap,
@@ -325,7 +375,8 @@ form fieldset.footer {
 	}
 
 	.feature-grid,
-	.repository-list {
+	.repository-list,
+	.download-actions {
 		margin-left: 0;
 		margin-right: 0;
 	}
