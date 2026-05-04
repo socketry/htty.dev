@@ -5,7 +5,7 @@
 		<p>Chimera is the desktop terminal emulator for that stack: it runs ordinary commands, detects HTTY bootstrap, and opens attached browser surfaces beside the terminal session.</p>
 		<div class="download-actions">
 			<a class="download-button primary" href="https://github.com/socketry/chimera/releases/latest/download/Chimera-macOS-arm64.dmg">Download macOS</a>
-			<a class="download-button" href="https://github.com/socketry/chimera/releases/latest/download/Chimera-Linux-x64.AppImage">Download Linux</a>
+			<a class="download-button" href="https://github.com/socketry/chimera/releases/latest/download/Chimera-Linux-x86_64.AppImage">Download Linux</a>
 			<a class="download-button" href="https://github.com/socketry/chimera/releases/latest/download/Chimera-Windows-x64.exe">Download Windows</a>
 			<a class="download-link" href="https://github.com/socketry/chimera/releases/latest">Release notes</a>
 		</div>
